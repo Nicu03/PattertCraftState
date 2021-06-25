@@ -6,8 +6,8 @@ public class TankState extends State {
 
     public TankState(Tank tank) {
         super(tank);
-        tank.setDamage(damage);
-        tank.setCanMove(canMove);
+        super.damage = damage;
+        super.canMove = canMove;
     }
 
     @Override

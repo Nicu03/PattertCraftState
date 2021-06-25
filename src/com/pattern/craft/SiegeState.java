@@ -6,8 +6,8 @@ public class SiegeState extends State {
 
     public SiegeState(Tank tank) {
         super(tank);
-        tank.setDamage(damage);
-        tank.setCanMove(canMove);
+        super.damage = damage;
+        super.canMove = canMove;
     }
 
     @Override

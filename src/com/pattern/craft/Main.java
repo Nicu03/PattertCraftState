@@ -25,11 +25,6 @@ public class Main {
                         break;
                     }
 
-//                    case "attack": {
-////                        attack();
-//                        break;
-//                    }
-//
                     case "move": {
                         tank.move();
                         break;
