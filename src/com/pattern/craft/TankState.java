@@ -1,19 +1,32 @@
 package com.pattern.craft;
 
-public class TankState implements ITank{
+public class TankState extends State {
+    private static final int damage = 10;
+    private static final boolean canMove = true;
 
-    @Override
-    public int getDamage() {
-        return 10;
+    public TankState(Tank tank) {
+        super(tank);
+        tank.setDamage(damage);
+        tank.setCanMove(canMove);
     }
 
     @Override
-    public boolean getCanMove() {
-        return true;
+    void toSiegeState() {
+        tank.changeState(new SiegeState(tank));
     }
 
     @Override
-    public String move() {
-        return "Can't move";
+    void toTankState() {
+        System.out.println("Already in TankState");
+    }
+
+    @Override
+    void move(int x, int y) {
+        System.out.println("Move to the X:"+x+" y:" +y);
+    }
+
+    @Override
+    void move() {
+        System.out.println("Move to the new location");
     }
 }
