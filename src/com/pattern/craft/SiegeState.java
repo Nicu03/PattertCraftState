@@ -17,7 +17,7 @@ public class SiegeState extends State {
 
     @Override
     void toTankState() {
-        tank.changeState(new TankState(tank));
+        super.tank.changeState(new TankState(super.tank));
     }
 
     @Override

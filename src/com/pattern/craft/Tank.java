@@ -4,6 +4,7 @@ public class Tank {
     private State state;
 
     public Tank() {
+
         this.state = new TankState(this);
     }
 

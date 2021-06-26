@@ -3,7 +3,6 @@ package com.pattern.craft;
 abstract class State {
     protected Tank tank;
     protected int damage;
-
     protected boolean canMove;
 
     public State(Tank tank) {
