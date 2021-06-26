@@ -17,11 +17,7 @@ public abstract class State {
         return canMove;
     }
 
-    abstract void toSiegeState();
+    abstract boolean toSiegeState();
 
-    abstract void toTankState();
-
-    abstract void move(int x,int y);
-
-    abstract void move();
+    abstract boolean toTankState();
 }

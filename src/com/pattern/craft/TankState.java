@@ -11,22 +11,13 @@ public class TankState extends State {
     }
 
     @Override
-    void toSiegeState() {
+    boolean toSiegeState() {
         super.tank.changeState(new SiegeState(super.tank));
+        return true;
     }
 
     @Override
-    void toTankState() {
-        System.out.println("Already in TankState");
-    }
-
-    @Override
-    void move(int x, int y) {
-        System.out.println("Move to the X:"+x+" y:" +y);
-    }
-
-    @Override
-    void move() {
-        System.out.println("Move to the new location");
+    boolean toTankState() {
+        return false;
     }
 }

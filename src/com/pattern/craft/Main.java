@@ -12,21 +12,23 @@ public class Main {
             if (input.isEmpty()) {
                 System.out.println("Nothing to do");
             } else {
-//                clearConsole();
                 switch (input) {
                     case "1": {
-                        tank.toTankState();
-                        printTankStats(tank);
+                        status(tank.toTankState(),"Normal Tank");
                         break;
                     }
                     case "2":{
-                        tank.toSiegeState();
-                        printTankStats(tank);
+                        status(tank.toSiegeState(),"Siege Tank");
                         break;
                     }
 
+                    case "attack":{
+                        System.out.println("Your damage is: " + tank.getDamage());
+                        break;
+                    }
                     case "move": {
-                        tank.move();
+                        String move = tank.move();
+                        System.out.println(move);
                         break;
                     }
 
@@ -41,10 +43,11 @@ public class Main {
         }
     }
 
-    static void printTankStats(Tank tank){
-        System.out.println("State = " + tank.getState().getClass().getName());
-        System.out.println("Damage = " + tank.getDamage());
-        System.out.println("CanMove: "+tank.isCanMove());
+    private static void status(Boolean status,String mode) {
+        if(status) {
+            System.out.println("State = " + mode);
+        }else{
+            System.out.println("Already in "+mode+" mode");
+        }
     }
-
 }

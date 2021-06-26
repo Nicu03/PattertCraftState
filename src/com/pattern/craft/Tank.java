@@ -25,19 +25,20 @@ public class Tank {
         return state;
     }
 
-    public void toSiegeState() {
-        state.toSiegeState();
+    public boolean toSiegeState() {
+        return state.toSiegeState();
     }
 
-    public void toTankState() {
-        state.toTankState();
+    public boolean toTankState() {
+        return state.toTankState();
     }
 
-    public void move(int x, int y){
-        state.move(x,y);
+    public String move(){
+        if (state.isCanMove()){
+            return "You move to the new destination";
+        }else{
+            return "You can't move";
+        }
     }
 
-    public void move(){
-        state.move();
-    }
 }

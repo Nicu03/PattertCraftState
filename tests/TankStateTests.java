@@ -31,4 +31,14 @@ public class TankStateTests {
         State state = tank.getState();
         assertEquals("Incorrect state for Normal Tank",TankState.class,state.getClass());
     }
+
+    @Test
+    public void testToTankState(){
+        assertFalse("You can select the same state",tank.toTankState());
+    }
+
+    @Test
+    public void testMove(){
+        assertEquals("Tank can't move","You move to the new destination",tank.move());
+    }
 }
