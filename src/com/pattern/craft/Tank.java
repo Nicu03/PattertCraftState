@@ -5,7 +5,7 @@ public class Tank {
 
     public Tank() {
 
-        this.state = new TankState(this);
+        this.state = new TankState(this,new TerranDriver());
     }
 
     public void changeState(State state) {
@@ -41,4 +41,15 @@ public class Tank {
         }
     }
 
+    public String getDriver(){
+        return state.getDriver().myDriver();
+    }
+
+    public void getInfected() {
+        state.Infect();
+    }
+
+    public void getRecover(){
+        state.Recover();
+    }
 }

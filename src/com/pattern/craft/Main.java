@@ -32,6 +32,22 @@ public class Main {
                         break;
                     }
 
+                    case "infect":{
+                        tank.getInfected();
+                        System.out.println("I got infected");
+                        break;
+                    }
+                    case "recover":{
+                        tank.getRecover();
+                        System.out.println("I recovered");
+                        break;
+                    }
+
+                    case "driver":{
+                        System.out.println("My driver is a: " + tank.getDriver());
+                        break;
+                    }
+
                     case "quit": {
                         System.exit(0);
                         break;
