@@ -23,7 +23,7 @@ public class Main {
                     }
 
                     case "attack":{
-                        System.out.println("Your damage is: " + tank.getDamage());
+                        System.out.println("My damage is: " + tank.getDamage());
                         break;
                     }
                     case "move": {

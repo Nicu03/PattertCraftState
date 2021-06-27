@@ -35,14 +35,14 @@ public class Tank {
 
     public String move(){
         if (state.isCanMove()){
-            return "You move to the new destination";
+            return "I move to the new destination";
         }else{
-            return "You can't move";
+            return "I can't move";
         }
     }
 
     public String getDriver(){
-        return state.getDriver().myDriver();
+        return state.getMyDriver();
     }
 
     public void getInfected() {

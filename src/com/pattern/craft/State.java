@@ -11,16 +11,16 @@ public abstract class State {
         this.driver = driver;
     }
 
-    public IDriver getDriver() {
-        return driver;
-    }
-
     public void Infect(){
         driver = new ZergDriver();
     }
 
     public void Recover(){
         driver = new TerranDriver();
+    }
+
+    public String getMyDriver(){
+        return driver.myDriver();
     }
 
     public int getDamage() {
